@@ -5,7 +5,6 @@ $light-grey: #EAEAEA;
 $footer-color: #353535;
 
 body {
-    min-width: 320px;
     max-width: 768px;
     margin: 0;
     font-family: "roboto", sans-serif;
@@ -129,10 +128,17 @@ body {
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 
     &__sectionTitle {
         margin-bottom: 0;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
     }
 
     &__card {
@@ -235,4 +241,55 @@ body {
 .fa-utensils,
 .fa-handshake {
     margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+    body {
+        max-width: none;
+    }
+
+    .choice {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 130px;
+        margin: 0;
+
+        &__btns {
+            display: flex;
+            gap: 50px;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
+
+    .restaurants {
+        padding: 30px 130px 50px 130px;
+        background-color: whitesmoke;
+
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        font-size: 12px;
+
+        &__logo {
+            width: 20%;
+        }
+
+        &__links {
+            flex-direction: row;
+        }
+    }
 }

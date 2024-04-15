@@ -41,47 +41,50 @@
         <!--fonctionnement-->
         <section class="choice">
             <h1>Fonctionnement</h1>
-            <article class="choice__btn">
-                <div class="choice__btn--left">
-                    <i class="fa-solid fa-1"></i>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <h2 class="choice__btnTitle">Choississez un restaurant</h2>
-                </div>
-            </article>
-            <article class="choice__btn">
-                <div class="choice__btn--left">
-                    <i class="fa-solid fa-2"></i>
-                    <i class="fa-solid fa-list"></i>
-                    <h2 class="choice__btnTitle">Composez votre menu</h2>
-                </div>
-            </article>
-            <article class="choice__btn">
-                <div class="choice__btn--left">
-                    <i class="fa-solid fa-3"></i>
-                    <i class="fa-solid fa-store"></i>
-                    <h2 class="choice__btnTitle">Déguster au restaurant</h2>
-                </div>
-            </article>
+            <div class="choice__btns">
+                <article class="choice__btn">
+                    <div class="choice__btn--left">
+                        <i class="fa-solid fa-1"></i>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h2 class="choice__btnTitle">Choississez un restaurant</h2>
+                    </div>
+                </article>
+                <article class="choice__btn">
+                    <div class="choice__btn--left">
+                        <i class="fa-solid fa-2"></i>
+                        <i class="fa-solid fa-list"></i>
+                        <h2 class="choice__btnTitle">Composez votre menu</h2>
+                    </div>
+                </article>
+                <article class="choice__btn">
+                    <div class="choice__btn--left">
+                        <i class="fa-solid fa-3"></i>
+                        <i class="fa-solid fa-store"></i>
+                        <h2 class="choice__btnTitle">Déguster au restaurant</h2>
+                    </div>
+                </article>
+            </div>
         </section>
         <!--restaurants-->
         <section id="restaurants" class="restaurants">
             <h1 class="restaurants__sectionTitle">Restaurants</h1>
             <a href="./restaurants/paletteDuGout.html">
-                <article class="restaurants__card">
-                    <p class="restaurants__new">Nouveau</p>
-                    <img class="restaurants__image"
-                        src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                        alt="assiette de salade">
-                    <div class="restaurants__content">
-                        <div>
-                            <h2 class="restaurants__title">La palette du goût</h2>
-                            <p class="restaurants__town">Ménilmontant</p>
+                <div class="restaurants__container">
+                    <article class="restaurants__card">
+                        <p class="restaurants__new">Nouveau</p>
+                        <img class="restaurants__image"
+                            src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="assiette de salade">
+                        <div class="restaurants__content">
+                            <div>
+                                <h2 class="restaurants__title">La palette du goût</h2>
+                                <p class="restaurants__town">Ménilmontant</p>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
                         </div>
-                        <div>
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                </article>
+                    </article>
             </a>
             <a href="./restaurants/noteEnchantee.html">
                 <article class="restaurants__card">
@@ -131,6 +134,7 @@
                     </div>
                 </article>
             </a>
+            </div>
         </section>
     </main>
     <footer class="footer">
