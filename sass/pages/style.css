@@ -3,6 +3,11 @@ body {
   margin: 0;
   font-family: "roboto", sans-serif;
 }
+@media (min-width: 768px) {
+  body {
+    max-width: none;
+  }
+}
 
 .header {
   text-align: center;
@@ -82,6 +87,21 @@ body {
   margin: 0;
   font-size: 13px;
 }
+@media (min-width: 768px) {
+  .choice {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 130px;
+    margin: 0;
+  }
+  .choice__btns {
+    display: flex;
+    gap: 50px;
+  }
+  .choice__btn {
+    width: 100%;
+  }
+}
 
 .fa-1,
 .fa-2,
@@ -112,6 +132,7 @@ body {
 }
 .restaurants__sectionTitle {
   margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .restaurants__container {
   display: flex;
@@ -163,6 +184,17 @@ body {
   margin: 0;
   font-size: 14px;
 }
+@media (min-width: 768px) {
+  .restaurants {
+    padding: 30px 130px 50px 130px;
+    background-color: whitesmoke;
+  }
+  .restaurants__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
 
 .restaurants a {
   text-decoration: none;
@@ -206,38 +238,7 @@ body {
   text-decoration: none;
   color: white;
 }
-
-.fa-utensils,
-.fa-handshake {
-  margin-right: 10px;
-}
-
 @media (min-width: 768px) {
-  body {
-    max-width: none;
-  }
-  .choice {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 130px;
-    margin: 0;
-  }
-  .choice__btns {
-    display: flex;
-    gap: 50px;
-  }
-  .choice__btn {
-    width: 100%;
-  }
-  .restaurants {
-    padding: 30px 130px 50px 130px;
-    background-color: whitesmoke;
-  }
-  .restaurants__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
   .footer {
     width: 100%;
     display: flex;
@@ -253,4 +254,9 @@ body {
   .footer__links {
     flex-direction: row;
   }
+}
+
+.fa-utensils,
+.fa-handshake {
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

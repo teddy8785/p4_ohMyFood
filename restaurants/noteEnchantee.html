@@ -10,53 +10,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../sass/restaurants.css">
+    <link rel="stylesheet" href="../sass/pages/restaurants.css">
     <title>La note enchantée</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="header__iconContent"><a href="../index.html"><i class="fa-solid fa-arrow-left header__icon"></i></a></div>
-        <div class="header__imgContent"><img class="header__logo" src="../Images et textes Ohmyfood/images/logo/ohmyfood.png" alt="logo ohmyfood"></div>
+        <div class="header__iconContent"><a href="../index.html"><i class="fa-solid fa-arrow-left header__icon"></i></a>
+        </div>
+        <div class="header__imgContent"><img class="header__logo"
+                src="../Images_et_textes_Ohmyfood/images/logo/ohmyfood.png" alt="logo ohmyfood"></div>
     </header>
 
-    <main>
-        <img class="photo" src="../Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+    <main class="main">
+        <img class="main__photo" src="../Images_et_textes_Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
             alt="photo d'une assiette de salade">
-        <div class="main">
+        <div class="main__restaurants">
             <div class="restaurant">
                 <h1 class="restaurant__title">La note enchantée</h1>
                 <i class="fa-regular fa-heart"></i>
             </div>
             <div class="restaurant__cards">
-            <h2 class="restaurant__plats"><span class="restaurant__plats--border">ENTR</span>ÉES</h2>
-            <article class="restaurant__btn">
-                <h2 class="restaurant__btnTitle">Ravioles de foie gras </h2>
-                <div class="restaurant__price">
-                    <p>Accompagnées de leur crème à la truffe</p>
-                    <p><strong>25€</strong></p>
-                </div>
-            </article>
-            <article class="restaurant__btn">
-                <h2 class="restaurant__btnTitle">Caviar osciètre</h2>
-            <div class="restaurant__price">
-                <p>Sur blini à la farine de blé noir</p>
-                <p><strong>35€</strong></p>
-            </article>
-            <article class="restaurant__btn">
-                <h2 class="restaurant__btnTitle">Homard et espuma de potiron</h2>
-            <div class="restaurant__price">
-                <p>Marinés aux zestes d'orange</p>
-                <p><strong>20€</strong></p>
-            </article>
-            <article class="restaurant__btn">
-                <h2 class="restaurant__btnTitle">Foie gras de canard cuit entier</h2>
-            <div class="restaurant__price">
-                <p>Confiture de figue et pain toasté</p>
-                <p><strong>20€</strong></p>
-            </article>
-        </div>
-            
+                <h2 class="restaurant__plats"><span class="restaurant__plats--border">ENTR</span>ÉES</h2>
+                <article class="restaurant__btn">
+                    <h2 class="restaurant__btnTitle">Ravioles de foie gras </h2>
+                    <div class="restaurant__price">
+                        <p>Accompagnées de leur crème à la truffe</p>
+                        <p><strong>25€</strong></p>
+                    </div>
+                </article>
+                <article class="restaurant__btn">
+                    <h2 class="restaurant__btnTitle">Caviar osciètre</h2>
+                    <div class="restaurant__price">
+                        <p>Sur blini à la farine de blé noir</p>
+                        <p><strong>35€</strong></p>
+                    </div>
+                </article>
+                <article class="restaurant__btn">
+                    <h2 class="restaurant__btnTitle">Homard et espuma de potiron</h2>
+                    <div class="restaurant__price">
+                        <p>Marinés aux zestes d'orange</p>
+                        <p><strong>20€</strong></p>
+                    </div>
+                </article>
+                <article class="restaurant__btn">
+                    <h2 class="restaurant__btnTitle">Foie gras de canard cuit entier</h2>
+                    <div class="restaurant__price">
+                        <p>Confiture de figue et pain toasté</p>
+                        <p><strong>20€</strong></p>
+                    </div>
+                </article>
+            </div>
+
             <div class="restaurant__cards">
                 <h2 class="restaurant__plats"><span class="restaurant__plats--border">PLAT</span>S</h2>
                 <article class="restaurant__btn">
@@ -68,19 +73,21 @@
                 </article>
                 <article class="restaurant__btn">
                     <h2 class="restaurant__btnTitle">Langoustine poêlée</h2>
-                <div class="restaurant__price">
-                    <p>Purée de patate douce</p>
-                    <p><strong>35€</strong></p>
+                    <div class="restaurant__price">
+                        <p>Purée de patate douce</p>
+                        <p><strong>35€</strong></p>
+                    </div>
                 </article>
                 <article class="restaurant__btn">
                     <h2 class="restaurant__btnTitle">Mijoté de queue de bœuf </h2>
-                <div class="restaurant__price">
-                    <p>Et riz sauvage aux zestes de citron</p>
-                    <p><strong>44€</strong></p>
+                    <div class="restaurant__price">
+                        <p>Et riz sauvage aux zestes de citron</p>
+                        <p><strong>44€</strong></p>
+                    </div>
                 </article>
             </div>
 
-             <div class="restaurant__cards">
+            <div class="restaurant__cards">
                 <h2 class="restaurant__plats"><span class="restaurant__plats--border">DESS</span>ERTS</h2>
                 <article class="restaurant__btn">
                     <h2 class="restaurant__btnTitle">Macaron noisette et chocolat</h2>
@@ -91,15 +98,17 @@
                 </article>
                 <article class="restaurant__btn">
                     <h2 class="restaurant__btnTitle">Baba au rhum revisité </h2>
-                <div class="restaurant__price">
-                    <p>Avec son coulis de citron</p>
-                    <p><strong>22€</strong></p>
+                    <div class="restaurant__price">
+                        <p>Avec son coulis de citron</p>
+                        <p><strong>22€</strong></p>
+                    </div>
                 </article>
                 <article class="restaurant__btn">
                     <h2 class="restaurant__btnTitle">Tarte au citron meringuée </h2>
-                <div class="restaurant__price">
-                    <p>Déstructurée</p>
-                    <p><strong>23€</strong></p>
+                    <div class="restaurant__price">
+                        <p>Déstructurée</p>
+                        <p><strong>23€</strong></p>
+                    </div>
                 </article>
             </div>
             <div class="hero-header__btnContent">
@@ -112,8 +121,8 @@
         <ul class="footer__links">
             <li><a class="footer__link" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
             <li><a class="footer__link" href="#"><i class="fa-solid fa-handshake"></i>Devenir partenaire</a></li>
-            <li><a class="footer__link" href="#">Mentions légales</a></li>
-            <li><a class="footer__link" href="#">Contact</a></li>
+            <li class="footer__space"><a class="footer__link" href="#">Mentions légales</a></li>
+            <li><a class="footer__link" href="mailto:ohmyfood@gmail.com">Contact</a></li>
         </ul>
     </footer>
 </body>
