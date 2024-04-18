@@ -3,22 +3,11 @@
 
 body {
     min-width: 320px;
-    max-width: 768px;
     margin: 0;
     font-family: "roboto", sans-serif;
-
-    @media (min-width: 768px) {
-        max-width: none;
-    }
 }
 
 .main {
-
-    @media (min-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
     &__photo {
         width: 100%;
@@ -33,9 +22,15 @@ body {
         bottom: 40px;
         margin-bottom: -40px;
         padding: 30px 10px 40px 10px;
+    }
 
-        @media (min-width: 768px) {
-            width: 80%;
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__restaurants {
+            width: 70%;
         }
     }
 }
@@ -67,11 +62,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @media (min-width: 768px) {
-        justify-content: center;
-        gap: 30px;
-    }
+    padding: 20px;
 
     &__cards {
         margin-bottom: 40px;
@@ -95,6 +86,7 @@ body {
     }
 
     &__btn {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -120,6 +112,16 @@ body {
     &__price p {
         margin: 0;
     }
+
+    @media (min-width: 768px) {
+        justify-content: center;
+        gap: 30px;
+
+        &__cards {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
 }
 
 .fa-heart {
@@ -136,16 +138,7 @@ body {
     }
 
     &__btn {
-        width: 180px;
-        font-size: 16px;
-        font-weight: 500;
-        text-align: center;
-        text-decoration: none;
-        background: linear-gradient($second-color, $main-color);
-        color: white;
-        border-radius: 30px;
-        padding: 20px;
-        box-shadow: 0px 5px 5px lightgray;
+        @include button;
     }
 }
 
@@ -159,6 +152,7 @@ body {
         color: white;
         font-family: "Shrikhand", serif;
         font-weight: 400;
+        font-style: normal;
         font-size: 20px;
         margin-top: 10px;
         margin-bottom: 15px;
@@ -180,7 +174,6 @@ body {
     }
 
     @media (min-width: 768px) {
-        width: 100%;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
