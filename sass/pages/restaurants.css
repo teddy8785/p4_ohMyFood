@@ -55,6 +55,30 @@ body {
   align-items: center;
   padding: 20px;
 }
+.restaurant::after {
+  font: var(--fa-font-regular);
+  content: "\f004";
+  cursor: pointer;
+  font-size: 25px;
+}
+.restaurant:active::after {
+  font: var(--fa-font-solid);
+  content: "\f004";
+  font-size: 25px;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+}
+.restaurant__view--1 {
+  animation: view-1 1000ms;
+}
+.restaurant__view--2 {
+  animation: view-2 1800ms;
+}
+.restaurant__view--3 {
+  animation: view-3 2600ms;
+}
 .restaurant__cards {
   margin-bottom: 40px;
 }
@@ -87,6 +111,7 @@ body {
 .restaurant__btnTitle {
   margin: 0;
   font-size: 15px;
+  font-family: "roboto", sans-serif;
 }
 .restaurant__price {
   display: flex;
@@ -95,6 +120,37 @@ body {
 }
 .restaurant__price p {
   margin: 0;
+  font-family: "roboto", sans-serif;
+}
+.restaurant__price--left {
+  position: relative;
+  right: 0px;
+}
+.restaurant__validate {
+  font-family: "FontAwesome";
+  width: 0px;
+  height: 100%;
+  background-color: #99E2D0;
+  position: absolute;
+  right: 0;
+  left: 1;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 15px 15px 0px;
+}
+.restaurant__validate::before {
+  content: "\f00c";
+  opacity: 0;
+  color: #99E2D0;
+  background-color: white;
+  padding: 1px 3px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .restaurant {
@@ -105,10 +161,6 @@ body {
     padding-left: 100px;
     padding-right: 100px;
   }
-}
-
-.fa-heart {
-  font-size: 20px;
 }
 
 /*hero-header*/
@@ -186,4 +238,37 @@ body {
 .fa-utensils,
 .fa-handshake {
   margin-right: 10px;
+}
+
+@keyframes view-1 {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes view-2 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes view-3 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }/*# sourceMappingURL=restaurants.css.map */

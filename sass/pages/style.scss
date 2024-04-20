@@ -169,7 +169,6 @@ body {
     }
 
     &__new {
-        width: 20%;
         height: 8px;
         font-size: 13px;
         font-weight: 600;
@@ -179,9 +178,12 @@ body {
         background-color: $third-color;
         color: green;
         position: absolute;
-        left: 70%;
-        padding: 10px;
-
+        right: 0;
+        left: 1;
+        top: 0;
+        bottom: 0;
+        padding: 11px;
+        margin-right: 20px;
     }
 
     &__content {
@@ -223,7 +225,7 @@ body {
 }
 
 .fa-heart {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .fa-solid.fa-heart {

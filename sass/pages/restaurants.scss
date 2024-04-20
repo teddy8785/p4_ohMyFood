@@ -64,6 +64,34 @@ body {
     align-items: center;
     padding: 20px;
 
+    &::after {
+        font: var(--fa-font-regular);
+        content: "\f004";
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    &:active::after {
+        font: var(--fa-font-solid);
+        content: "\f004";
+        font-size: 25px;
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient($main-color, $second-color);
+    }
+
+    &__view--1 {
+        animation: view-1 1000ms;
+    }
+
+    &__view--2 {
+        animation: view-2 1800ms;
+    }
+
+    &__view--3 {
+        animation: view-3 2600ms;
+    }
+
     &__cards {
         margin-bottom: 40px;
     }
@@ -101,6 +129,7 @@ body {
     &__btnTitle {
         margin: 0;
         font-size: 15px;
+        font-family: "roboto", sans-serif;
     }
 
     &__price {
@@ -111,6 +140,40 @@ body {
 
     &__price p {
         margin: 0;
+        font-family: "roboto", sans-serif;
+    }
+
+    &__price--left {
+        position: relative;
+        right: 0px;
+    }
+
+    &__validate {
+        font-family: "FontAwesome";
+        width: 0px;
+        height: 100%;
+        background-color: $third-color;
+        position: absolute;
+        right: 0;
+        left: 1;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 15px 15px 0px;
+    }
+
+    &__validate::before {
+        content: "\f00c";
+        opacity: 0;
+        color: $third-color;
+        background-color: white;
+        padding: 1px 3px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     @media (min-width: 768px) {
@@ -124,9 +187,6 @@ body {
     }
 }
 
-.fa-heart {
-    font-size: 20px;
-}
 
 /*hero-header*/
 
@@ -199,4 +259,44 @@ body {
 .fa-utensils,
 .fa-handshake {
     margin-right: 10px;
+}
+
+@keyframes view-1 {
+    0%{
+        transform: scaleY(0);
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+@keyframes view-2 {
+    0%{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+@keyframes view-3 {
+    0%{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
 }
