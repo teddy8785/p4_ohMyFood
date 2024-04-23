@@ -107,6 +107,16 @@ body {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 5px 5px lightgray;
+  transition: all 500ms;
+}
+.restaurant__btn:hover p {
+  right: 80px;
+}
+.restaurant__btn:hover .restaurant__validate {
+  width: 80px;
+}
+.restaurant__btn:hover .restaurant__validate::before {
+  opacity: 1;
 }
 .restaurant__btnTitle {
   margin: 0;
@@ -125,6 +135,7 @@ body {
 .restaurant__price--left {
   position: relative;
   right: 0px;
+  transition: all 500ms;
 }
 .restaurant__validate {
   font-family: "FontAwesome";
@@ -133,13 +144,13 @@ body {
   background-color: #99E2D0;
   position: absolute;
   right: 0;
-  left: 1;
   top: 0;
   bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0px 15px 15px 0px;
+  transition: all 500ms;
 }
 .restaurant__validate::before {
   content: "\f00c";
@@ -151,6 +162,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 500ms;
 }
 @media (min-width: 768px) {
   .restaurant {
@@ -163,6 +175,38 @@ body {
   }
 }
 
+@keyframes view-1 {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes view-2 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes view-3 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 /*hero-header*/
 .hero-header__btnContent {
   display: flex;
@@ -238,37 +282,4 @@ body {
 .fa-utensils,
 .fa-handshake {
   margin-right: 10px;
-}
-
-@keyframes view-1 {
-  0% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-@keyframes view-2 {
-  0% {
-    transform: scaleY(0);
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-@keyframes view-3 {
-  0% {
-    transform: scaleY(0);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  100% {
-    transform: scaleY(1);
-  }
 }/*# sourceMappingURL=restaurants.css.map */
