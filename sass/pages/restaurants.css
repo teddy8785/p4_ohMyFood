@@ -110,10 +110,10 @@ body {
   transition: all 500ms;
 }
 .restaurant__btn:hover p {
-  right: 80px;
+  right: 9%;
 }
 .restaurant__btn:hover .restaurant__validate {
-  width: 80px;
+  width: 9%;
 }
 .restaurant__btn:hover .restaurant__validate::before {
   opacity: 1;
@@ -172,6 +172,15 @@ body {
   .restaurant__cards {
     padding-left: 100px;
     padding-right: 100px;
+  }
+  .restaurant__btn:hover p {
+    right: 80px;
+  }
+  .restaurant__btn:hover .restaurant__validate {
+    width: 80px;
+  }
+  .restaurant__btn:hover .restaurant__validate::before {
+    opacity: 1;
   }
 }
 

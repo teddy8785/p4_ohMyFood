@@ -129,11 +129,11 @@ body {
     
     &__btn:hover {
         p {
-            right: 80px;
+            right: 9%;
         }
 
         .restaurant__validate {
-            width: 80px;
+            width: 9%;
         }
     
         .restaurant__validate::before {
@@ -200,6 +200,20 @@ body {
         &__cards {
             padding-left: 100px;
             padding-right: 100px;
+        }
+
+        &__btn:hover {
+            p {
+                right: 80px;
+            }
+    
+            .restaurant__validate {
+                width: 80px;
+            }
+        
+            .restaurant__validate::before {
+                opacity: 1;
+            }
         }
     }
 }
