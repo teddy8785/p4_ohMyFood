@@ -64,14 +64,16 @@ body {
     align-items: center;
     padding: 20px;
 
-    &::after {
+ 
+    &__heart::after {
+        display: inline-block;
         font: var(--fa-font-regular);
         content: "\f004";
         cursor: pointer;
         font-size: 25px;
     }
 
-    &:active::after {
+    &__heart:hover::after {
         font: var(--fa-font-solid);
         content: "\f004";
         font-size: 25px;
@@ -128,17 +130,23 @@ body {
     }
     
     &__btn:hover {
-        p {
-            right: 9%;
+        .restaurant__price--left {
+            right: 50px;
         }
 
         .restaurant__validate {
-            width: 9%;
+            width: 50px;
         }
     
         .restaurant__validate::before {
             opacity: 1;
         }
+
+       .restaurant__overflow {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+       }
     }
 
     &__btnTitle {
@@ -156,6 +164,7 @@ body {
     &__price p {
         margin: 0;
         font-family: "roboto", sans-serif;
+        position: relative;
     }
 
     &__price--left {
@@ -171,8 +180,6 @@ body {
         background-color: $third-color;
         position: absolute;
         right: 0;
-        top: 0;
-        bottom: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -200,20 +207,6 @@ body {
         &__cards {
             padding-left: 100px;
             padding-right: 100px;
-        }
-
-        &__btn:hover {
-            p {
-                right: 80px;
-            }
-    
-            .restaurant__validate {
-                width: 80px;
-            }
-        
-            .restaurant__validate::before {
-                opacity: 1;
-            }
         }
     }
 }

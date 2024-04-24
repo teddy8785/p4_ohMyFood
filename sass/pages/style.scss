@@ -195,6 +195,23 @@ body {
         border-radius: 0px 0px 20px 20px;
     }
 
+    &__heart::after {
+        display: inline-block;
+        font: var(--fa-font-regular);
+        content: "\f004";
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    &__heart:hover::after {
+        font: var(--fa-font-solid);
+        content: "\f004";
+        font-size: 25px;
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient($main-color, $second-color);
+    }
+    
     &__title {
         margin: 0;
         font-size: 16px;

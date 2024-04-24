@@ -55,13 +55,14 @@ body {
   align-items: center;
   padding: 20px;
 }
-.restaurant::after {
+.restaurant__heart::after {
+  display: inline-block;
   font: var(--fa-font-regular);
   content: "\f004";
   cursor: pointer;
   font-size: 25px;
 }
-.restaurant:active::after {
+.restaurant__heart:hover::after {
   font: var(--fa-font-solid);
   content: "\f004";
   font-size: 25px;
@@ -109,14 +110,19 @@ body {
   box-shadow: 0px 5px 5px lightgray;
   transition: all 500ms;
 }
-.restaurant__btn:hover p {
-  right: 9%;
+.restaurant__btn:hover .restaurant__price--left {
+  right: 50px;
 }
 .restaurant__btn:hover .restaurant__validate {
-  width: 9%;
+  width: 50px;
 }
 .restaurant__btn:hover .restaurant__validate::before {
   opacity: 1;
+}
+.restaurant__btn:hover .restaurant__overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .restaurant__btnTitle {
   margin: 0;
@@ -131,6 +137,7 @@ body {
 .restaurant__price p {
   margin: 0;
   font-family: "roboto", sans-serif;
+  position: relative;
 }
 .restaurant__price--left {
   position: relative;
@@ -144,8 +151,6 @@ body {
   background-color: #99E2D0;
   position: absolute;
   right: 0;
-  top: 0;
-  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,15 +177,6 @@ body {
   .restaurant__cards {
     padding-left: 100px;
     padding-right: 100px;
-  }
-  .restaurant__btn:hover p {
-    right: 80px;
-  }
-  .restaurant__btn:hover .restaurant__validate {
-    width: 80px;
-  }
-  .restaurant__btn:hover .restaurant__validate::before {
-    opacity: 1;
   }
 }
 
