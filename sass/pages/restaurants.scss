@@ -2,7 +2,6 @@
 @import "../utils/mixins.scss";
 
 body {
-    min-width: 320px;
     margin: 0;
     font-family: "roboto", sans-serif;
 }
@@ -57,14 +56,13 @@ body {
 }
 
 .restaurant {
-    width: 90%;
     border-radius: 20px 20px 0px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 5px 20px 5px 5px;
 
- 
+
     &__heart::after {
         display: inline-block;
         font: var(--fa-font-regular);
@@ -80,6 +78,10 @@ body {
         color: transparent;
         background-clip: text;
         background-image: linear-gradient($main-color, $second-color);
+    }
+
+    &__content {
+        width: 99%;
     }
 
     &__view--1 {
@@ -102,7 +104,7 @@ body {
         margin: 0;
         font-family: "Shrikhand", serif;
         font-weight: 400;
-        font-size: 25px;
+        font-size: 23px;
     }
 
     &__plats {
@@ -128,7 +130,7 @@ body {
         box-shadow: 0px 5px 5px lightgray;
         transition: all 500ms;
     }
-    
+
     &__btn:hover {
         .restaurant__price--left {
             right: 50px;
@@ -137,16 +139,17 @@ body {
         .restaurant__validate {
             width: 50px;
         }
-    
+
         .restaurant__validate::before {
             opacity: 1;
         }
 
-       .restaurant__overflow {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-       }
+        .restaurant__overflow {
+            width: 72%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
     }
 
     &__btnTitle {
@@ -165,6 +168,7 @@ body {
         margin: 0;
         font-family: "roboto", sans-serif;
         position: relative;
+
     }
 
     &__price--left {
@@ -212,11 +216,11 @@ body {
 }
 
 @keyframes view-1 {
-    0% {
+    from {
         transform: scaleY(0);
     }
 
-    100% {
+    to {
         transform: scaleY(1);
     }
 }

@@ -1,5 +1,4 @@
 body {
-  min-width: 320px;
   margin: 0;
   font-family: "roboto", sans-serif;
 }
@@ -48,12 +47,11 @@ body {
 }
 
 .restaurant {
-  width: 90%;
   border-radius: 20px 20px 0px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 5px 20px 5px 5px;
 }
 .restaurant__heart::after {
   display: inline-block;
@@ -71,6 +69,9 @@ body {
           background-clip: text;
   background-image: linear-gradient(#9356DC, #FF79DA);
 }
+.restaurant__content {
+  width: 99%;
+}
 .restaurant__view--1 {
   animation: view-1 1000ms;
 }
@@ -87,7 +88,7 @@ body {
   margin: 0;
   font-family: "Shrikhand", serif;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 23px;
 }
 .restaurant__plats {
   font-weight: 200;
@@ -120,6 +121,7 @@ body {
   opacity: 1;
 }
 .restaurant__btn:hover .restaurant__overflow {
+  width: 72%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -181,10 +183,10 @@ body {
 }
 
 @keyframes view-1 {
-  0% {
+  from {
     transform: scaleY(0);
   }
-  100% {
+  to {
     transform: scaleY(1);
   }
 }

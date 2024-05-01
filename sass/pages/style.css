@@ -1,5 +1,4 @@
 body {
-  min-width: 320px;
   margin: 0;
   font-family: "roboto", sans-serif;
 }
@@ -140,6 +139,10 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+.restaurants a {
+  text-decoration: none;
+  color: black;
+}
 .restaurants__sectionTitle {
   margin-bottom: 0;
   margin-bottom: 10px;
@@ -175,7 +178,6 @@ body {
   color: green;
   position: absolute;
   right: 0;
-  left: 1;
   top: 0;
   bottom: 0;
   padding: 11px;
@@ -226,11 +228,6 @@ body {
     -moz-column-gap: 80px;
          column-gap: 80px;
   }
-}
-
-.restaurants a {
-  text-decoration: none;
-  color: black;
 }
 
 .fa-heart {
@@ -307,6 +304,7 @@ body {
   justify-content: center;
   padding-top: 300px;
   animation: opacity 3s;
+  animation-delay: 300ms;
   animation-fill-mode: forwards;
 }
 .loader__title {
@@ -314,8 +312,9 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 40px;
-  color: #FF79DA;
+  color: transparent;
   animation: color 3s;
+  animation-delay: 500ms;
   animation-fill-mode: forwards;
 }
 @media (min-width: 768px) {
