@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   font-family: "roboto", sans-serif;
@@ -52,6 +53,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px 5px 5px;
+  /* animation coeur */
+  /*animation class view 1- 2 et 3 */
+  /* animation carré vert */
 }
 .restaurant__heart::after {
   display: inline-block;
@@ -126,6 +130,36 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
+.restaurant__price--left {
+  position: relative;
+  right: 0px;
+  transition: all 300ms;
+}
+.restaurant__validate {
+  font-family: "FontAwesome";
+  width: 0px;
+  height: 100%;
+  background-color: #99E2D0;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 15px 15px 0px;
+  transition: all 300ms;
+}
+.restaurant__validate::before {
+  content: "\f00c";
+  opacity: 0;
+  color: #99E2D0;
+  background-color: white;
+  padding: 1px 3px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 600ms;
+}
 .restaurant__btnTitle {
   margin: 0;
   font-size: 15px;
@@ -140,36 +174,6 @@ body {
   margin: 0;
   font-family: "roboto", sans-serif;
   position: relative;
-}
-.restaurant__price--left {
-  position: relative;
-  right: 0px;
-  transition: all 500ms;
-}
-.restaurant__validate {
-  font-family: "FontAwesome";
-  width: 0px;
-  height: 100%;
-  background-color: #99E2D0;
-  position: absolute;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0px 15px 15px 0px;
-  transition: all 500ms;
-}
-.restaurant__validate::before {
-  content: "\f00c";
-  opacity: 0;
-  color: #99E2D0;
-  background-color: white;
-  padding: 1px 3px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 500ms;
 }
 @media (min-width: 768px) {
   .restaurant {

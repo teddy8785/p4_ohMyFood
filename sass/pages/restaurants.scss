@@ -62,7 +62,7 @@ body {
     align-items: center;
     padding: 5px 20px 5px 5px;
 
-
+    /* animation coeur */
     &__heart::after {
         display: inline-block;
         font: var(--fa-font-regular);
@@ -84,6 +84,7 @@ body {
         width: 99%;
     }
 
+    /*animation class view 1- 2 et 3 */
     &__view--1 {
         animation: view-1 1000ms;
     }
@@ -131,6 +132,7 @@ body {
         transition: all 500ms;
     }
 
+    /* animation carré vert */
     &__btn:hover {
         .restaurant__price--left {
             right: 50px;
@@ -152,6 +154,39 @@ body {
         }
     }
 
+    &__price--left {
+        position: relative;
+        right: 0px;
+        transition: all 300ms;
+    }
+
+    &__validate {
+        font-family: "FontAwesome";
+        width: 0px;
+        height: 100%;
+        background-color: $third-color;
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 15px 15px 0px;
+        transition: all 300ms;
+    }
+
+    &__validate::before {
+        content: "\f00c";
+        opacity: 0;
+        color: $third-color;
+        background-color: white;
+        padding: 1px 3px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 600ms;
+    }
+
     &__btnTitle {
         margin: 0;
         font-size: 15px;
@@ -169,39 +204,6 @@ body {
         font-family: "roboto", sans-serif;
         position: relative;
 
-    }
-
-    &__price--left {
-        position: relative;
-        right: 0px;
-        transition: all 500ms;
-    }
-
-    &__validate {
-        font-family: "FontAwesome";
-        width: 0px;
-        height: 100%;
-        background-color: $third-color;
-        position: absolute;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0px 15px 15px 0px;
-        transition: all 500ms;
-    }
-
-    &__validate::before {
-        content: "\f00c";
-        opacity: 0;
-        color: $third-color;
-        background-color: white;
-        padding: 1px 3px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 500ms;
     }
 
     @media (min-width: 768px) {
